@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Killer Smart Contracts</title>
+    <style>
+    	
+    	* {
+    		margin: 0;
+    		padding: 0;
+    		text-decoration: none;
+    	}
+
+    	body {
+    		font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    		color: white;
+    		background-color: black;
+    		font-size: 1.5vw;
+    		overflow-x: none;
+    	}
+
+    	#container {
+
+    		/*width: 1000px;
+    		margin: auto;*/
+
+    	}
+
+    	#hero {
+    		background-image: url("gas-killer.png");
+			width: 63vw;
+			height: 80vw;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			float: right;
+    	}
+
+    	nav {
+    		position: fixed;
+			width: 11rem;
+			top: 4vw;
+			left: 8vw;
+			text-align: center;
+			text-shadow: 2px 2px black;
+			text-transform: uppercase;
+			z-index: 1000;
+    	} nav ul {
+    		list-style-type: none;
+    	} nav a {
+    		display: block;
+    		width: 100%;
+    		color: white;
+    		padding: .5rem;
+    		background: rgb(45,45,45);
+			background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(168,168,168,1) 50%, rgba(99,99,99,1) 100%); 
+    		border-bottom: 3px solid black;
+    		transform: scaleX(1.4);
+    	} nav a:hover {
+    		background: rgb(168,168,168);
+			background: linear-gradient(90deg, rgba(168,168,168,1) 0%, rgba(99,99,99,1) 50%, rgba(168,168,168,1) 100%);
+			text-shadow: -2px -2px black;
+    	}
+
+
+    	#header-info {
+    		position: relative;
+    		top: 35vw;
+    		left: 15vw;
+    		width: 25vw;
+    	}
+
+    	h1 {
+    		font-size: 3rem;
+    		line-height: 2.5rem;
+    		margin-bottom: 1rem;
+    	}
+
+    	h2 {
+    		font-size: 2.5rem;
+    		line-height: 2.5rem;
+    		margin-bottom: 1rem;
+    	}
+
+    	h3 {
+    		margin-bottom: 1rem;
+    	}
+
+    	section {
+    		min-height: 80vh;
+    		width: 60vw;
+    		margin: auto;
+    	}
+
+    	#header {
+    		width: 100%;
+    		height: 120vh;
+    	}
+
+    	p {
+    		max-width: 50vw;
+    		margin-bottom: 1rem;
+    	}
+
+    	.comparison {
+   		 display: flex;
+		  justify-content: space-between;
+/*		  margin-top: 2rem;*/
+		  }
+
+		.traditional,
+		.optimized {
+		  flex-basis: 48%;
+		  background-color: #fff;
+		  padding: 1.5rem;
+		  border-radius: 0.5rem;
+		  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+
+
+    </style>
+</head>
+
+<body>
+
+	<div id="container">
+		<nav>
+			<ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gas-savings">Gas Savings</a></li>
+                <li><a href="#integration">Integration</a></li>
+            </ul>
+		</nav>
+
+		<section id="header">
+
+			<div id="hero"> </div>
+
+			<div id="header-info">
+				<h1>Gas Killer Smart Contracts</h1>
+	                    
+	            <p>An eco-friendly AVS that uses BLS signature verification to securely simulate transactions off-chain and write back storage slot updates, saving gas and reducing blockchain energy consumption.</p>
+	        </div>
+
+		</section>
+
+		<section id="how-it-works">
+
+			<h2>How It Works</h2>
+
+            <p>Gas Killer optimizes smart contract execution by moving computation off-chain while maintaining security.</p>
+            <div class="comparison">
+                <div class="traditional">
+                    <h3>Traditional Approach</h3>
+                    <p>All computation happens on-chain, requiring gas for every operation, including reads and complex calculations.</p>
+                </div>
+                <div class="optimized">
+                    <h3>Optimized Approach</h3>
+                    <ul>
+                        <li>Computation happens off-chain (simulated by the operator)</li>
+                        <li>Only storage updates are applied on-chain</li>
+                        <li>BLS signatures verify the integrity of the updates</li>
+                    </ul>
+                </div>
+            </div>
+
+		</section>
+
+		<section id="features">
+
+			<h2>Features</h2>
+
+			<div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="icon">🛡️</span>
+                        <h3>BLS Signature Verification</h3>
+                        <p>Uses BLS signature aggregation for efficient multi-party consensus</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">📄</span>
+                        <h3>Slashing Mechanism</h3>
+                        <p>Implements objective on-chain slashing for security guarantees</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">💾</span>
+                        <h3>State Transition Management</h3>
+                        <p>Tracks state transitions for consistent calculations, reverting if another write operation occurs first</p>
+                    </div>
+                </div>
+
+		</section>
+
+		<section id="gas-savings">
+
+			<h2>Gas Savings</h2>
+
+			<p>The optimized approach demonstrates substantial gas savings that scale with complexity.</p>
+                <ul class="savings-list">
+                    <li><strong>99%</strong> With 3000 voters: ~99% gas reduction</li>
+                    <li><strong>97%</strong> With 1000 voters: ~97% gas reduction</li>
+                    <li><strong>81%</strong> With 100 voters: ~81% gas reduction</li>
+                    <li><strong>63%</strong> With 40 voters: ~63% gas reduction</li>
+                    <li><strong>38%</strong> With 15 voters: ~38% gas reduction</li>
+                </ul>
+
+		</section>
+
+		<section id="integration">
+
+			<h2>Integration</h2>
+
+			<ol class="integration-steps">
+                <li>
+                    <h3>Autogenerate Functions</h3>
+                    <p>Autogenerate functions based on the target function (for gas savings) that implement slashing, AVS access control, and contract storage tracking.</p>
+                </li>
+                <li>
+                    <h3>Deploy Upgraded Contract</h3>
+                    <p>Deploy an upgraded version of the original contract (all previous functions are still supported).</p>
+                </li>
+                <li>
+                    <h3>Redirect Transactions</h3>
+                    <p>Redirect existing transactions to the AVS instead of the contract.</p>
+                </li>
+            </ol>
+
+		</section>
+
+	</div>
+
+</body>
+
+</html>
